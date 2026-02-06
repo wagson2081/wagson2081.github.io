@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorpresa 💖</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #00ffdd, #00ffdd);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .ventana {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      display: none;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .ventana.activa {
+      display: block;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ff0000;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255,0,0,0.4);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .error {
+      color: rgb(0, 132, 255);
+      font-size: 14px;
+    }
+
+    /* BLOQUES */
+    .bloque {
+      margin-bottom: 35px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .bloque.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .especial {
+      background: #fff0f6;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .cierre {
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Ventana 1 -->
+<div class="ventana activa" id="seguridad">
+  <h2>🔒 Solo para alguien especial</h2>
+  <p>Ingresa la fecha en la que cambiaste mi vida por completo💕</p>
+  <input type="date" id="fecha">
+  <button onclick="verificar()">Entrar</button>
+  <p class="error" id="mensaje"></p>
+</div>
+
+<!-- Ventana 2 -->
+<div class="ventana" id="sorpresa">
+
+  <!-- TODO TU CONTENIDO ORIGINAL (NO TOCADO) -->
+  <!-- PORTADA -->
+  <section class="bloque">
+    <h1>💖HOLA MI VIDA</h1>
+    <p>feliz aniversario mi amor💗🥺</p>
+    <img src="22.jpg">
+  </section>
+
+  <!-- MENSAJE -->
+  <section class="bloque">
+    <h2>✨ Un mensaje para ti</h2>
+    <p>
+      Desde que empezamos a estar mi compromiso era claro contigo te había conocido media año aun que no hablábamos mucho tu me dijiste lo que sentías y yo lo hice también, aunque no nos conocíamos en persona yo sabia que eres una chica buena y especial, 
+Nunca pude decirte en la cara lo que sentía por ti me daba miedo tener que arriésgame el solo tenerte en frente no sabia como explicártelo. Nunca nos vimos cara cara o tuvimos la oportunidad de hablar pero yo sentía 
+que aun así había una conexión en ese momento para mi era muy raro, por que me había gustado una chica ala que no conocía y nunca la hable en persona pero aun así salió un te amo cuando éramos amigos de 
+lejitos: La cuestión me fui lejos la verdad pensé que no íbamos a seguir hablando me fui por que mi papa me prometió hacerme estudiar en Arequipa cosa que nunca paso mi papa se desapareció me dejo de hablar 
+pero mi pequeña no lo izo incluso a pesar de la distancia ella me hablaba poco pero la comunicación que había me daba un tipo de nostalgia que me hacia sentirme mal lejos de ti. Yo me acuerdo que unas semanas 
+antes de que regresara a Juliaca me dijiste que me esperarías, pensé que estabas loca o algo así  jsjsj perdón amor pero eso pensé en ese momento. Y decidí regresarme tenia muchos motivos pero el mas importante era 
+que necesitaba conocerte, dejar mis miedos y darlo todo por ti. Sinceramente la primera ves que nos vimos no sabia que decirte solo quería verte en persona si no mal me equivoco cuando te vi estabas con tu polera 
+ploma con un logo triangulo gens azules corte princesa fuimos a pasear sin saber donde ir simplemente que el destino nos llevara pasábamos por la Moquegua y un señor nos ofreció rosas voltee a ver tu carita y la 
+compre. 
+    </p>
+    <p>
+      Pasaron los días y te vi me fuiste a recoger y wuau me sorprendiste no me aguante y no quería perder mas el tiempo decidí estar contigo pasaste mi prueba sin tener que tomarla
+Y yo se que ahora que vamos mas tiempo quiero que las cosas valla bien 
+    </p>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="bloque">
+    <h2>📸 Nuestros momentos</h2>
+    <img src="rosa.jpg">
+    <p>la primera rosa que te di el primer dia que te conoci</p>
+    <p>escucha esta cancion que te debe de sonar</p>
+    <p>https://youtu.be/ieGn30YnWgw?list=RDieGn30YnWgw</p>
+    <img src="12.jpg">
+    <p>nuestro primer aniversario mi vida</p>
+    <img src="13.jpg">
+    <p>el segundo dia que pude tocar esos labios tan bellos que me traes</p>
+  </section>
+
+  <!-- METAS -->
+  <section class="bloque">
+    <h2>yo quiero todo esto contigo</h2>
+    <p><strong>📍 meta 1:</strong> lograr nuestros estudios. que ambos egresemos de la carrera de medicina humana, apoyándonos mutuamente y amarte   </p>
+    <p><strong>📍 meta 2:</strong> viajar disfrutar la vida juntos comprar una casita tener mucho dinero y nunca quiero dejar de amarte</p>
+    <p><strong>📍 meta 3:</strong> quiero que seas mi esposa y tener hijos contigo,nustros mini proyectos a futuro y amarte hasta el final  </p>
+  </section>
+
+  <!-- PROMESAS -->
+  <section class="bloque">
+    <h2>yo se que para llegar a todo esto no va ser facil mi amor</h2>
+    <p>
+        tengo muchas cosas que mejorar tu sabes cual es, fue mi peor enemigo en todas las cosas que hice en mi vida al perder un campeonato o postula ala U y ahora en mi relacion contigo. sobrepensar las cosas 
+        siempre me hicieron mal. no quiero perderte eres esa persona que me hace bien ayer cuando me consolaste me di cuenta que la unica cura que necesito en esos momentos es tu presencia y que estes ahi para 
+        mi. 
+    </p>
+    <ul>
+      <li>te prometo mejorar dejar de sobrepensar las cosas decirtelas por que tu eres mi sanacion en esos momentos</li>
+      <li>te prometo estar siempre para ti apoyarte en lo que necesites protegerte</li>
+      <li>te prometo que tu sera mi unico amor en la vida, que nunca pase por tu cabesita que te engañaria por que eso jamas pasara, eres mi
+        unica mujer que quiero en la vida quiero que sea mi compañera para toda la vida </li>
+      <li>te prometo estar contigo en lo maslo y buenos momento esres todo para mi y estare para ti </li>
+    </ul>
+  </section>
+
+  <!-- ESPECIAL -->
+  <section class="bloque especial">
+    <h2>🌹 Solo para ti</h2>
+    <p>
+      quiero ser tu hombre aunque ahora solo soy un niño quiero ser tu pareja, la unica persona ala que miren tus ojos hacer todo contigo y solo contigo eres lo unico que quiero en este mundo 💞
+    </p>
+    <img src="amo.png">
+  </section>
+
+  <!-- CIERRE -->
+  <section class="bloque cierre">
+    <h2>💘 Mensaje final</h2>
+    <p>
+      te amo mi hermosha mi carita hermosha que sepas que eres mia shiii aunque suene muy propietario eres mia shi te amo mucho mi vida mi amor mi carita hermosha ese es tu apodo amoroso mi carita hermosha 
+      :soy el unico que te puso ese apodo y el unico que te va a tratar como te lo mereces como se lo merece la reina de mi corazon 👑💗
+    </p>
+  </section>
+
+</div>
+
+<script>
+  const fechaCorrecta = "2025-09-06";
+
+  function verificar() {
+    const fechaIngresada = document.getElementById("fecha").value;
+    const mensaje = document.getElementById("mensaje");
+
+    if (fechaIngresada === fechaCorrecta) {
+      document.getElementById("seguridad").classList.remove("activa");
+      document.getElementById("sorpresa").classList.add("activa");
+      activarAnimaciones();
+    } else {
+      mensaje.textContent = "Esa no es nuestra fecha pues 😅";
+    }
+  }
+
+  function activarAnimaciones() {
+    const bloques = document.querySelectorAll(".bloque");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    bloques.forEach(b => observer.observe(b));
+  }
+</script>
+
+</body>
+</html>
